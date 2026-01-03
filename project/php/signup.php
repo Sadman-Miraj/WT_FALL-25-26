@@ -23,7 +23,8 @@
             <label for="">Confirm Password:</label>
             <input type="password" name ="confirm_password" required>
 
-            <input type="submit" value"Sign Up>
+            <input type="submit" value"Sign Up">
         </form>
+        <script scr="../js/sign.js"></script>
     </body>
 </html>
