@@ -18,3 +18,9 @@ h2 {
     text-align: center;
     color: #333;
 }
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
