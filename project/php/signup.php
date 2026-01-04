@@ -39,6 +39,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $message ="Invalid email format";
         $messageType="error";
     }
+    elseif(empty($address))
+    {
+        $message ="Address cannot be empty.";
+        $messageType="error";
+    }
 }
 <!DOCTYpe html>
 <html>
