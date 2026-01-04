@@ -70,3 +70,12 @@ if (isset($_GET['delete'])) {
         $messageType = "error";
     }
 }
+// Fetch all employees
+$employees = [];
+$result = $conn->query("SELECT * FROM employe ORDER BY id DESC");
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $employees[] = $row;
+    }
+}
+?>
