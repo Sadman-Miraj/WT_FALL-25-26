@@ -44,6 +44,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $message ="Address cannot be empty.";
         $messageType="error";
     }
+    elseif(empty($password))
+    {
+        $message ="Password cannot be empty.";
+        $messageType="error";
+    }
 }
 <!DOCTYpe html>
 <html>
