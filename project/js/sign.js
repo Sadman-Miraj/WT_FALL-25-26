@@ -7,7 +7,7 @@ document.querySelector('form').addEventListener('submit',function(e)
     {
         alert("Password do not match!");
         e.preventDefault();
-        
+
     }
 
-}
+});
