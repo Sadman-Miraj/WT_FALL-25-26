@@ -92,4 +92,50 @@ if ($result->num_rows > 0) {
             <div class="message <?php echo $messageType; ?>">
                 <?php echo htmlspecialchars($message); ?>
             </div>
-        <?php endif; ?>
+        <?php endif; ?> 
+         <!-- Add Employee Form -->
+         <div class="form-section">
+            <h3>Add New Employee</h3>
+            <form method="post" action="">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Employee Name:</label>
+                        <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name); ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" value="<?php echo htmlspecialchars($age); ?>" min="18" max="65" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post">Post/Position:</label>
+                        <select id="post" name="post" required>
+                            <option value="">Select Post</option>
+                            <option value="Manager" <?php echo ($post == 'Manager') ? 'selected' : ''; ?>>Manager</option>
+                            <option value="Developer" <?php echo ($post == 'Developer') ? 'selected' : ''; ?>>Developer</option>
+                            <option value="Designer" <?php echo ($post == 'Designer') ? 'selected' : ''; ?>>Designer</option>
+                            <option value="HR" <?php echo ($post == 'HR') ? 'selected' : ''; ?>>HR</option>
+                            <option value="Accountant" <?php echo ($post == 'Accountant') ? 'selected' : ''; ?>>Accountant</option>
+                            <option value="Sales" <?php echo ($post == 'Sales') ? 'selected' : ''; ?>>Sales</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task">Tasks Completed:</label>
+                        <input type="number" id="task" name="task" value="<?php echo htmlspecialchars($task); ?>" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="report">Reports Submitted:</label>
+                        <input type="number" id="report" name="report" value="<?php echo htmlspecialchars($report); ?>" min="0" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required><?php echo htmlspecialchars($address); ?></textarea>
+                </div>
+                
+                <button type="submit" name="add_employee" class="btn btn-primary">Add Employee</button>
+            </form>
+        </div>
