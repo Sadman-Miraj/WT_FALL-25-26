@@ -19,7 +19,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $message ="Name cannot be empty.";
         $messageType="error";
     }
-    elseif()
+    elseif(empty($age))
+    {
+        $message ="Age cannot be empty.";
+        $messageType="error";
+    }
+    
 }
 <!DOCTYpe html>
 <html>
