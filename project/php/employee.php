@@ -13,3 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_employee'])) {
     $task = trim($_POST["task"] ?? "");
     $report = trim($_POST["report"] ?? "");
     $address = trim($_POST["address"] ?? "");
+
+    if (empty($name)) {
+        $message = "Name is required.";
+        $messageType = "error";
