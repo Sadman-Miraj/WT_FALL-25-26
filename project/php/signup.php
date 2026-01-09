@@ -3,7 +3,7 @@ include "../db/db.php";
 
 $name = $age = $email = $address = $password = $confirm_password = "";
 $message = "";
-$messageType = "";
+$messageType = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST["name"] ?? "");
